@@ -1,3 +1,4 @@
+
 .hero-glow-backdrop {
   position: fixed;
   top: 50%;
@@ -13,8 +14,4 @@
   );
   pointer-events: none;
   z-index: 0;
-}
-
-html {
-  scroll-behavior: smooth;
 }
