@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
 
+// Import Images
+import MyImg from "../MyImg.jpg";
+import Rentwise from "../Rentwise.png";
+import GoSafe from "../GoSafe.jpg";
+import WillItRun from "../WillItRun.png";
+
 // Enhanced Typewriter Component with Bold Name Support & Faster Speed
 const TypewriterText = ({ paragraphs, speed = 18 }) => {
   const [displayedText, setDisplayedText] = useState("");
@@ -217,10 +223,10 @@ const App = () => {
               }`}>
                 <div className="overflow-hidden rounded-xl aspect-[3/4] bg-zinc-950">
                   <img
-                    src={`${import.meta.env.BASE_URL}MyImg.jpg`}
-                    alt="John Mark Prina"
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  />
+  src={MyImg}
+  alt="John Mark Prina"
+  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+/>
                 </div>
               </div>
             </div>
@@ -322,11 +328,11 @@ const App = () => {
                 }`}
               >
                 <div className="overflow-hidden rounded-xl aspect-video bg-zinc-950 relative">
-                  <img 
-                    src={`${import.meta.env.BASE_URL}Rentwise.png`} 
-                    alt="RentWise System" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                  />
+                  <img
+  src={Rentwise}
+  alt="RentWise System"
+  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+/>
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="px-4 py-2 text-xs font-bold uppercase tracking-wider text-white bg-black/70 rounded-full backdrop-blur-sm border border-white/20">
                       Visit Site ↗
@@ -401,11 +407,11 @@ const App = () => {
                 darkMode ? "border-zinc-800/80 bg-zinc-900/50" : "border-slate-200 bg-white"
               }`}>
                 <div className="overflow-hidden rounded-xl aspect-video bg-zinc-950">
-                  <img 
-                    src={`${import.meta.env.BASE_URL}GoSafe.jpg`} 
-                    alt="GoSafe App" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                  />
+                  <img
+  src={GoSafe}
+  alt="GoSafe App"
+  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+/>
                 </div>
               </div>
             </div>
@@ -416,16 +422,12 @@ const App = () => {
                 darkMode ? "border-zinc-800/80 bg-zinc-900/50" : "border-slate-200 bg-white"
               }`}>
                 <div className="overflow-hidden rounded-xl aspect-video bg-zinc-950 flex items-center justify-center">
-                  <img 
-                    src={`${import.meta.env.BASE_URL}WillItRun.png`} 
-                    alt="Will It Run?" 
-                    onError={(e) => {
-                      e.target.onerror = null; 
-                      e.target.style.display = 'none';
-                      e.target.nextSibling.style.display = 'flex';
-                    }}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                  />
+                  <img
+  src={WillItRun}
+  alt="Will It Run?"
+  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+/>
+                   
                   <div className="hidden flex-col items-center justify-center text-center p-6">
                     <span className="text-3xl sm:text-4xl font-black text-emerald-400 font-mono tracking-tighter">W/&lt;&lt;</span>
                     <span className="text-2xl sm:text-3xl font-extrabold text-white font-mono tracking-wider mt-1">;it run?</span>
