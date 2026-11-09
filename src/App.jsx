@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+import myProfileImg from "./MyImg.jpg";
+import rentWiseImg from "./RentWise.png";
+import goSafeImg from "./GoSafe.jpg";
+import willItRunImg from "./WillItRun.png";
 
 // Enhanced Typewriter Component with Bold Name Support & Faster Speed
 const TypewriterText = ({ paragraphs, speed = 18 }) => {
@@ -219,10 +223,10 @@ const App = () => {
               }`}>
                 <div className="overflow-hidden rounded-xl aspect-[3/4] bg-zinc-950">
                   <img
-                    src="/MyImg.jpg"
-                    alt="John Mark Prina"
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  />
+  src={myProfileImg}
+  alt="John Mark Prina"
+  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+/>
                 </div>
               </div>
             </div>
@@ -325,10 +329,10 @@ const App = () => {
               >
                 <div className="overflow-hidden rounded-xl aspect-video bg-zinc-950 relative">
                   <img 
-                    src="/RentWise.png" 
-                    alt="RentWise System" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                  />
+                      src={`${import.meta.env.BASE_URL}RentWise.png`} 
+                      alt="RentWise System" 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                    />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="px-4 py-2 text-xs font-bold uppercase tracking-wider text-white bg-black/70 rounded-full backdrop-blur-sm border border-white/20">
                       Visit Site ↗
@@ -403,7 +407,11 @@ const App = () => {
                 darkMode ? "border-zinc-800/80 bg-zinc-900/50" : "border-slate-200 bg-white"
               }`}>
                 <div className="overflow-hidden rounded-xl aspect-video bg-zinc-950">
-                  <img src="/GoSafe.jpg" alt="GoSafe App" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img 
+                      src={`${import.meta.env.BASE_URL}GoSafe.jpg`} 
+                      alt="GoSafe App" 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                    />
                 </div>
               </div>
             </div>
@@ -415,9 +423,9 @@ const App = () => {
               }`}>
                 <div className="overflow-hidden rounded-xl aspect-video bg-zinc-950 flex items-center justify-center">
                   <img 
-                    src="/WillItRun.png" 
-                    alt="Will It Run?" 
-                    onError={(e) => {
+                      src={`${import.meta.env.BASE_URL}WillItRun.png`} 
+                      alt="Will It Run?" 
+                      onError={(e) => {
                       e.target.onerror = null; 
                       e.target.style.display = 'none';
                       e.target.nextSibling.style.display = 'flex';
