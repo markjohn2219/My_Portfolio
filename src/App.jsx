@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-
 // Enhanced Typewriter Component with Bold Name Support & Faster Speed
 const TypewriterText = ({ paragraphs, speed = 18 }) => {
   const [displayedText, setDisplayedText] = useState("");
@@ -27,10 +26,8 @@ const TypewriterText = ({ paragraphs, speed = 18 }) => {
     const nameIndex = text.indexOf(targetName);
 
     if (nameIndex === -1) {
-      // Check if typing is currently inside the name "John Mark Prina"
-      const partialMatch = targetName.substring(0, text.length - text.indexOf("Hello! I'm "));
-      if (text.startsWith("Hello! I'm ")) {
-        const prefix = "Hello! I'm ";
+      const prefix = "Hello! I'm ";
+      if (text.startsWith(prefix)) {
         const typedNamePart = text.substring(prefix.length);
         const restOfText = text.substring(prefix.length + typedNamePart.length);
         
@@ -209,7 +206,7 @@ const App = () => {
             </h2>
           </div>
 
-          {/* Top Half: Picture + Description WITH BOLD NAME & FASTER TYPEWRITER */}
+          {/* Top Half: Picture + Description */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center mb-16">
             {/* Left Column: Profile Picture */}
             <div className="md:col-span-5 flex justify-center">
@@ -220,10 +217,10 @@ const App = () => {
               }`}>
                 <div className="overflow-hidden rounded-xl aspect-[3/4] bg-zinc-950">
                   <img
-                      src={myProfileImg}
-                      alt="John Mark Prina"
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    />
+                    src={`${import.meta.env.BASE_URL}MyImg.jpg`}
+                    alt="John Mark Prina"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
               </div>
             </div>
@@ -326,10 +323,10 @@ const App = () => {
               >
                 <div className="overflow-hidden rounded-xl aspect-video bg-zinc-950 relative">
                   <img 
-                      src={`${import.meta.env.BASE_URL}RentWise.png`} 
-                      alt="RentWise System" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                    />
+                    src={`${import.meta.env.BASE_URL}RentWise.png`} 
+                    alt="RentWise System" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                  />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="px-4 py-2 text-xs font-bold uppercase tracking-wider text-white bg-black/70 rounded-full backdrop-blur-sm border border-white/20">
                       Visit Site ↗
@@ -405,10 +402,10 @@ const App = () => {
               }`}>
                 <div className="overflow-hidden rounded-xl aspect-video bg-zinc-950">
                   <img 
-                      src={`${import.meta.env.BASE_URL}GoSafe.jpg`} 
-                      alt="GoSafe App" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                    />
+                    src={`${import.meta.env.BASE_URL}GoSafe.jpg`} 
+                    alt="GoSafe App" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                  />
                 </div>
               </div>
             </div>
@@ -420,9 +417,9 @@ const App = () => {
               }`}>
                 <div className="overflow-hidden rounded-xl aspect-video bg-zinc-950 flex items-center justify-center">
                   <img 
-                      src={`${import.meta.env.BASE_URL}WillItRun.png`} 
-                      alt="Will It Run?" 
-                      onError={(e) => {
+                    src={`${import.meta.env.BASE_URL}WillItRun.png`} 
+                    alt="Will It Run?" 
+                    onError={(e) => {
                       e.target.onerror = null; 
                       e.target.style.display = 'none';
                       e.target.nextSibling.style.display = 'flex';
@@ -496,7 +493,7 @@ const App = () => {
               <span className="text-xs font-bold uppercase tracking-widest text-[#c5a880] block mb-1">CALL / SMS</span>
               <span className={`text-sm font-semibold transition-colors ${
                 darkMode ? "text-zinc-200 group-hover:text-white" : "text-slate-700 group-hover:text-slate-900"
-              }`}>+63 973 302 8910</span>
+              }`}>+63 993 902 4200</span>
             </a>
           </div>
 
