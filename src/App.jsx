@@ -323,7 +323,7 @@ const App = () => {
               >
                 <div className="overflow-hidden rounded-xl aspect-video bg-zinc-950 relative">
                   <img 
-                    src={`${import.meta.env.BASE_URL}RentWise.png`} 
+                    src={`${import.meta.env.BASE_URL}Rentwise.png`} 
                     alt="RentWise System" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                   />
