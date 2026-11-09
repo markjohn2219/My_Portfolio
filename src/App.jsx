@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-import myProfileImg from "./MyImg.jpg";
-import rentWiseImg from "./RentWise.png";
-import goSafeImg from "./GoSafe.jpg";
-import willItRunImg from "./WillItRun.png";
+
 
 // Enhanced Typewriter Component with Bold Name Support & Faster Speed
 const TypewriterText = ({ paragraphs, speed = 18 }) => {
@@ -223,10 +220,10 @@ const App = () => {
               }`}>
                 <div className="overflow-hidden rounded-xl aspect-[3/4] bg-zinc-950">
                   <img
-  src={myProfileImg}
-  alt="John Mark Prina"
-  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-/>
+                      src={myProfileImg}
+                      alt="John Mark Prina"
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    />
                 </div>
               </div>
             </div>
