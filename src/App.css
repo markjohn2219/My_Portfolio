@@ -1,0 +1,20 @@
+.hero-glow-backdrop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 1200px;
+  background: radial-gradient(
+    circle,
+    rgba(197, 168, 128, 0.18) 0%,
+    rgba(140, 110, 70, 0.08) 40%,
+    rgba(10, 10, 10, 0) 75%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
